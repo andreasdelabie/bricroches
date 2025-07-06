@@ -40,6 +40,7 @@ header .desktop, header .mobile, footer {
         text-align: center;
         nav {
             display: flex;
+            flex-direction: row;
             align-items: center;
             gap: 1rem;
         }
