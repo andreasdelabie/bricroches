@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Page.Params.Title }} | BriCroches🧶</title>
+    <link rel="canonical" href="{{ .Page.Permalink }}">
+    <link rel="shortcut icon" href="/favicon.webp" type="image/x-icon">
+    {{ with resources.Get "css/style.scss" | toCSS | minify | fingerprint}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{ partial "header.html" }}
+    <main>
+        {{ with .Page.Params.Images}}
+        <div class="image-scroller-wrapper">
+            <div class="image-scroller">
+                {{ $id := 1 }}
+                {{ range .}}
+                {{ $image := resources.Get (printf "/images/%s" .) }}
+                {{ $imageUrl := ($image.Resize "800x webp").RelPermalink }}
+                <div class="image" id="image-{{ $id }}">
+                    <a href="{{ $imageUrl }}" target="_blank"><img src="{{ $imageUrl }}" alt="Post image"></a>
+                </div>
+                {{ $id = add $id 1 }}
+                {{ end }}
+            </div>
+            {{ if gt (len .) 1 }}
+            <nav>
+                {{ $id := 1 }}
+                {{ range .}}
+                <a href="#image-{{ $id }}"></a>
+                {{ $id = add $id 1 }}
+                {{ end }}
+                <script defer>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const scroller = document.querySelector('.image-scroller');
+                        document.querySelectorAll('.image-scroller-wrapper nav a').forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const targetId = this.getAttribute('href').replace('#', '');
+                                const target = document.getElementById(targetId);
+                                scroller.scrollTo({
+                                    left: target.offsetLeft
+                                });
+                            });
+                        });
+                    });
+                </script>
+            </nav>
+            {{ end }}
+        </div>
+        {{ end }}
+        <h1>{{ .Page.Title }}</h1>
+        <article>
+            {{ .Page.Content }}
+        </article>
+        <p><i>Date: {{ .Page.Params.Date.Format "02/01/2006" }}</i></p>
+    </main>
+    {{ partial "footer.html" }}
+</body>
+
+</html>
