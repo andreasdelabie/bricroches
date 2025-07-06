@@ -14,9 +14,3 @@ Nullam ipsum nisi, fringilla ut tempus sit amet, mollis eget turpis. Orci varius
 Phasellus pulvinar, ligula eget aliquet finibus, lorem nulla aliquam turpis, sed sodales elit orci et nulla. Donec luctus libero enim, in lobortis risus tempor non. Proin in interdum ipsum. Quisque sed enim a eros ullamcorper gravida. In mauris nisl, cursus nec purus eu, dictum tempus libero. Praesent vulputate urna quis nisl aliquet, eget pretium nisl finibus. Nam luctus vestibulum odio et ultricies. Nam sed condimentum metus, a aliquet ligula. Aliquam ullamcorper elit et tellus aliquet tincidunt. Nunc commodo tristique metus et mollis. Aliquam ac porta ex. Sed leo tortor, suscipit at tempus nec, mollis a lorem. Curabitur dictum nisl sit amet metus consequat, vitae vestibulum sem dictum. Phasellus commodo ex in consequat sagittis. Suspendisse tristique enim et neque scelerisque, non laoreet erat aliquam.
 
 Nulla at elementum risus. Sed facilisis sapien sed viverra imperdiet. Nam non imperdiet leo. Ut vulputate bibendum ipsum, at lobortis nulla semper at. Praesent urna ipsum, lobortis in ornare ultrices, blandit nec augue. Suspendisse eget lacus arcu. Maecenas finibus, arcu sed aliquam efficitur, erat quam tincidunt lorem, sit amet fermentum orci lorem mattis ex. Donec dapibus mattis pulvinar. Cras cursus, dolor ut aliquam cursus, lacus erat imperdiet tellus, eu rhoncus dui tellus ut enim. Duis facilisis metus in hendrerit mollis. Phasellus mollis pharetra posuere. Fusce maximus magna eu dui placerat vehicula.
-```button
-name Update Website
-type command
-action Shell commands: Execute: Update Website
-color default
-```

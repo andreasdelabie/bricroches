@@ -1,16 +1,45 @@
 <header>
-    <div class="left">
-        <h2><a href="/">BriCroches</a></h2>
+    <div class="desktop">
+        <div class="left">
+            <h2><a href="/">BriCroches</a></h2>
+        </div>
+        <div class="center">
+            <nav>
+                <a href="/about">About</a>
+                <a href="/posts">Posts</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+        <div class="right">
+            <img src="/favicon.webp" alt="Bricroches logo" width="64" height="64">
+        </div>
     </div>
-    <div class="center">
-        <nav>
-            <a href="/about">About</a>
-            <a href="/posts">Posts</a>
-            <a href="/gallery">Gallery</a>
-            <a href="/contact">Contact</a>
-        </nav>
+    <div class="mobile">
+        <div class="left">
+            <img src="/icons/menu.svg" alt="Menu icon" width="32" onclick="showMenu()">
+        </div>
+        <div class="center">
+            <img src="/favicon.webp" alt="Bricroches logo" width="64" height="64">
+        </div>
+        <div class="right"></div>
+        <div class="menu" id="menu">
+            <img src="/icons/menu.svg" alt="Menu icon" width="32" onclick="hideMenu()">
+            <nav>
+                <a href="/about">About</a>
+                <a href="/posts">Posts</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
     </div>
-    <div class="right">
-        <img src="/favicon.webp" alt="Bricroches logo" width="64" height="64">
-    </div>
+    <script>
+        const menu = document.getElementById('menu')
+        function showMenu() {
+            menu.style.display = 'block'
+        }
+        function hideMenu() {
+            menu.style.display = 'none'
+        }
+    </script>
 </header>
