@@ -30,8 +30,8 @@
     {
       "id": "8cxf2vwjkg",
       "platform_specific_commands": {
-        "default": "git pull && rm -rf public && hugo --gc --minify && git add -A && git commit -m \"$(date) by Obsidian\" && git push",
-        "win32": "git pull && rmdir /s /q public && hugo --gc --minify && git add -A && git commit -m \"%date% %time% by Obsidian\" && git push"
+        "default": "git pull && rm -rf public && hugo --gc --minify && git add -A && git commit -m \"$(date) by Obsidian\" && git push && echo \"Update completed!\"",
+        "win32": "git pull && rmdir /s /q public && hugo --gc --minify && git add -A && git commit -m \"%date% %time% by Obsidian\" && git push && echo \"Update completed!\""
       },
       "shells": {},
       "alias": "Update Website",
