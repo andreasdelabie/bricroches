@@ -107,6 +107,15 @@ main {
     }
 }
 
+.links {
+    * {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        line-height: 1.5em;
+    }
+}
+
 .image-gallery {
     display: flex;
     justify-content: center;

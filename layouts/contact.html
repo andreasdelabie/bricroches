@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robot" content="noindex nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BriCroches🧶</title>
+    <link rel="shortcut icon" href="/favicon.webp" type="image/x-icon">
+    {{ with resources.Get "css/style.scss" | toCSS | minify | fingerprint}}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{ partial "header.html" }}
+    <main>
+        <h1>Contact</h1>
+        {{ .Page.Content }}
+        <div class="links">
+            <div>
+                <img src="/icons/phone.svg" alt="Phone icon" height="16px">
+                <a href="tel:+32 497 62 59 08">(+32)497 62 59 08</a>
+            </div>
+            <div>
+                <img src="/icons/instagram.svg" alt="Instagram logo" height="16px">
+                <a href="https://www.instagram.com/bricroches" target="_blank">DM on Instagram</a>
+            </div>
+        </div>
+    </main>
+    {{ partial "footer.html" }}
+</body>
+
+</html>
