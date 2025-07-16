@@ -5,6 +5,7 @@
     --text2: hsla(36, 32%, 30%, 1);
 }
 
+
 body {
     padding: 0;
     margin: 0;
@@ -15,6 +16,27 @@ body {
         color: var(--text);
         &:hover, :focus {
             color: var(--text2);
+        }
+    }
+    @media screen and (max-width: 768px) {
+        header .desktop {
+            display: none;
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;;
+            padding: 1rem 5vw;
+            text-align: center;
+        }
+        main {
+            padding: 5vh 5vw;
+        }
+    }
+    @media screen and (min-width: 769px) {
+        header .mobile {
+            display: none;
         }
     }
 }
@@ -50,12 +72,6 @@ header .desktop, header .mobile, footer {
     }
 }
 
-header .desktop {
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
-
 header .mobile {
     .menu {
         display: none;
@@ -80,20 +96,6 @@ header .mobile {
             gap: 1rem;
         }
     }
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-footer {
-    @media screen and (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;;
-        padding: 1rem 5vw;
-        text-align: center;
-    }
 }
 
 main {
@@ -101,10 +103,22 @@ main {
     padding: 10vh 25vw;
     box-sizing: border-box;
     background-color: var(--background1);
-    @media screen and (max-width: 768px) {
-        padding: 5vh 5vw;
-        
+    article {
+        max-width: 60ch;
     }
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    * {
+        margin: 0
+    }
+}
+
+.related {
+    margin-top: 10vh;
 }
 
 .links {

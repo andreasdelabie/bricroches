@@ -1,7 +1,7 @@
 ---
 title: Titel voor je post
 date: "{{date}}"
-images:
-  - bestandsnaam
+images: 
+tags:
 ---
 Post content

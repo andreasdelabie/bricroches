@@ -1,5 +1,3 @@
 baseURL = 'https://bricroches.be'
 languageCode = 'en-us'
 title = 'BriCroches'
-
-disableKinds = ['taxonomy', 'term']
