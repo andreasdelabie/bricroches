@@ -24,13 +24,16 @@
             {{ .Page.Content }}
         </article>
         <p><i>Date: {{ .Page.Params.Date.Format "02/01/2006" }}</i></p>
+        {{ with .Page.Params.Tags }}
         <div class="tags">
             <p>Tags:</p>
-            {{ range .Page.Params.Tags }} <a href="/tags/{{ . }}">{{ . }}</a> {{ end }}
+            {{ range . }} <a href="/tags/{{ . }}">{{ . }}</a> {{ end }}
         </div>
+        {{ end }}
+        {{ with .Site.RegularPages.Related . | first 3 }}
         <div class="related">
             <h2>Related:</h2>
-            {{ range site.RegularPages.Related . | first 3 }}
+            {{ range . }}
             <a href="{{ .RelPermalink}}">
                 <h3>{{ .Title }}</h3>
                 {{ with .Params.images }}
@@ -40,6 +43,7 @@
             </a>
             {{ end }}
         </div>
+        {{ end }}
     </main>
     {{ partial "footer.html" }}
 </body>
