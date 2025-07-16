@@ -21,7 +21,7 @@
     <main>
         <h1>{{ .Title }}:</h1>
         <ul>
-        {{ range .Pages }}<li><a href="{{ .Permalink }}">{{ .Page.Title }}</a></li>{{ end }}
+        {{ range .Pages }}<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>{{ end }}
         </ul>
     </main>
     {{ partial "footer.html" }}
