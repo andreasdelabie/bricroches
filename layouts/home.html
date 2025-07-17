@@ -19,8 +19,9 @@
     <main>
         <h1>Welcome to BriCroches🧶</h1>
         {{ .Content }}
+        {{ with where .Site.RegularPages "Section" "posts" | first 5 }}
         <h2>Recent posts:</h2>
-        {{ range where .Site.RegularPages "Section" "posts" | first 5 }}
+        {{ range .}}
         <a href="{{ .RelPermalink }}">
             <h3>{{ .Title }}</h3>
             {{ with .Params.images }}
@@ -31,6 +32,7 @@
         {{ end }}
         <br>
         <a href="/posts"><i>Show all...</i></a>
+        {{ end }}
     </main>
     {{ partial "footer.html" }}
 </body>

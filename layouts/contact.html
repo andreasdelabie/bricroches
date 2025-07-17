@@ -29,6 +29,14 @@
                 <a href="https://www.instagram.com/bricroches" target="_blank">DM on Instagram</a>
             </div>
         </div>
+        <div class="cartoon">
+            <img id="cartoon" src="" alt="Funny crocheting cartoon" height="300px">
+            <script>
+                let imagePlaceholder = document.getElementById("cartoon")
+                let index = Math.floor(Math.random()*6)
+                imagePlaceholder.setAttribute("src", `/images/cartoons/${index}.jpg`)
+            </script>
+        </div>
     </main>
     {{ partial "footer.html" }}
 </body>
