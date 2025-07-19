@@ -2,7 +2,6 @@
     <p>Share this page:</p>
     <div>
         <a href="https://www.facebook.com/dialog/share?href={{.Permalink}}&text=hi&app_id=595447170025209" target="_blank" title="Share on Facebook"><img src="/icons/facebook.svg" alt="Facebook share icon" height="21px"></a>
-        <a href="https://www.facebook.com/dialog/send?link={{.Permalink}}&redirect_uri={{ .Permalink }}&app_id=595447170025209" target="_blank" title="Share on Messenger"><img src="/icons/messenger.svg" alt="Messenger share icon" height="21px"></a>
         <a href="https://wa.me/?text={{.Permalink}}" target="_blank" title="Share on WhatsApp"><img src="/icons/whatsapp.svg" alt="WhatsApp share icon" height="21px"></a>
         {{ if .Params.images }}
         {{ $image := resources.Get (printf "/images/%s" (index .Params.images 0)) }}
