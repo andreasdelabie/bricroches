@@ -4,7 +4,7 @@
         {{ $id := 1 }}
         {{ range .}}
         {{ $image := resources.Get (printf "/images/%s" .) }}
-        {{ $imageUrl := ($image.Resize "800x webp").RelPermalink }}
+        {{ $imageUrl := ($image.Resize "x800 webp").RelPermalink }}
         <div class="image" id="image-{{ $id }}">
             <a href="{{ $imageUrl }}" target="_blank"><img src="{{ $imageUrl }}" alt="Post image"></a>
         </div>

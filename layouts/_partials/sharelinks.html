@@ -1,0 +1,13 @@
+<div class="sharelinks">
+    <p>Share this page:</p>
+    <div>
+        <a href="https://www.facebook.com/dialog/share?href={{.Permalink}}&text=hi&app_id=595447170025209" target="_blank" title="Share on Facebook">F</a>
+        <a href="https://www.facebook.com/dialog/send?link={{.Permalink}}&redirect_uri={{ .Permalink }}&app_id=595447170025209" target="_blank" title="Share on Messenger">M</a>
+        <a href="https://wa.me/?text={{.Permalink}}" target="_blank" title="Share on WhatsApp">W</a>
+        {{ if .Params.images }}
+        {{ $image := resources.Get (printf "/images/%s" (index .Params.images 0)) }}
+        <a href='https://pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{ ($image.Resize "x800 webp").Permalink }}&description={{ .Title }}%20%7C%20BriCroches' target="_blank" title="Share on Pinterest">P</a>
+        {{ end }}
+        <a href="mailto:?body={{ .Permalink }}" target="_blank" title="Share via e-mail">E</a>
+    </div>
+</div>

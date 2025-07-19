@@ -30,6 +30,7 @@
             {{ range . }} <a href="/tags/{{ . }}">{{ . }}</a> {{ end }}
         </div>
         {{ end }}
+        {{ partial "sharelinks.html" . }}
         {{ with .Site.RegularPages.Related . | first 3 }}
         <div class="related">
             <h2>Related:</h2>
