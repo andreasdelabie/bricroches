@@ -108,6 +108,7 @@ main {
     }
 }
 
+
 .tags {
     display: flex;
     gap: 0.5rem;
@@ -118,7 +119,7 @@ main {
 }
 
 .related {
-    margin-top: 10vh;
+    margin-top: 1.5rem;
 }
 
 .links {
@@ -128,10 +129,6 @@ main {
         align-items: center;
         line-height: 1.5em;
     }
-}
-
-.cartoon {
-    margin-top: 1.5rem;
 }
 
 .image-gallery {
@@ -185,5 +182,17 @@ main {
                 background-color: var(--background2);
             }
         }
+    }
+}
+
+.cartoon {
+    margin-top: 1.5rem;
+}
+
+.sharelinks {
+    margin-top: 1.5rem;
+    * {
+        display: flex;
+        gap: 0.5rem;
     }
 }
